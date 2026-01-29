@@ -9,7 +9,8 @@
     "start": "node src/index.js",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest --detectOpenHandles",
     "pretest": "cross-env NODE_ENV=test jest --clearCache",
-    "lint": "eslint . --ext .js,.ts"
+    "lint": "eslint . --ext .js,.ts",
+    "test:coverage": "NODE_OPTIONS=--experimental-vm-modules jest --detectOpenHandles --coverage --ci"
   },
   "keywords": [],
   "author": "",
@@ -28,3 +29,4 @@
     "supertest": "^6.2.4"
   }
 }
+
