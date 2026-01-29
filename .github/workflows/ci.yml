@@ -22,29 +22,6 @@ jobs:
           MYSQL_DATABASE: DB
           MYSQL_USER: DB
           MYSQL_PASSWORD: DB
-
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        node-version: [18, 20]
-
-    services:
-      mysql:
-        image: mysql:8.0
-        env:
-          MYSQL_ROOT_PASSWORD: mypassword
-          MYSQL_DATABASE: DB
-          MYSQL_USER: DB
-          MYSQL_PASSWORD: DB
         ports:
           - 3306:3306
         options: >-
